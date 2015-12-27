@@ -14,7 +14,7 @@
     "url": "https://github.com/maiordom/zanpakuto/issues"
   },
   "bin": {
-    "zanpakuto": "./zanpakuto.js"
+    "zanpakuto": "./zanpakuto.sh"
   },
   "homepage": "https://github.com/maiordom/zanpakuto"
 }
