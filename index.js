@@ -10,6 +10,7 @@ var logger = function() {
     console.log(arguments);
 };
 
+exec(util.format('cp %s/src/.editorconfig %s', moduleDir, execDir), logger);
 exec(util.format('cp %s/src/.eslintrc.js %s', moduleDir, execDir), logger);
 exec(util.format('cp %s/src/gulpfile.js %s', moduleDir, execDir), logger);
 exec(util.format('cp %s/src/pre-commit.js %s', moduleDir, execDir), logger);
