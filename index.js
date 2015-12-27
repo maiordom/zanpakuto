@@ -6,16 +6,14 @@ var util = require('util');
 
 var execDir = process.cwd();
 var moduleDir = __dirname;
-var logger = function() {
-    console.log(arguments);
-};
+var logger = function() {};
 
-exec(util.format('cp %s/src/.editorconfig %s', moduleDir, execDir), logger);
-exec(util.format('cp %s/src/.eslintrc.js %s', moduleDir, execDir), logger);
-exec(util.format('cp %s/src/pre-commit.js %s', moduleDir, execDir), logger);
+exec(util.format('cp -vi %s/src/.editorconfig %s', moduleDir, execDir), logger);
+exec(util.format('cp -vi %s/src/.eslintrc.js %s', moduleDir, execDir), logger);
+exec(util.format('cp -vi %s/src/pre-commit.js %s', moduleDir, execDir), logger);
 
-exec(util.format('cp %s/src/gulpfile.js %s', moduleDir, execDir), logger);
-exec(util.format('cp -r %s/src/demo %s', moduleDir, execDir), logger);
-exec(util.format('cp -r %s/src/test %s', moduleDir, execDir), logger);
-exec(util.format('mkdir %s/src', execDir), logger);
-exec(util.format('mkdir %s/dist', execDir), logger);
+exec(util.format('cp -vi %s/src/gulpfile.js %s', moduleDir, execDir), logger);
+exec(util.format('cp -riv %s/src/demo %s', moduleDir, execDir), logger);
+exec(util.format('cp -riv %s/src/test %s', moduleDir, execDir), logger);
+exec(util.format('mkdir -v %s/src', execDir), logger);
+exec(util.format('mkdir -v %s/dist', execDir), logger);
